@@ -1,0 +1,11 @@
+DBLP 3
+P@CS mean [u,d,c,z,h,p,k] [0.5473684210526316,0.5052631578947369,0.3894736842105263,0.5684210526315789,0.42105263157894735,0.22105263157894736,0.3894736842105263] sd [u,d,c,z,h,p,k] [NaN,NaN,NaN,NaN,NaN,NaN,NaN]
+ AUPRC mean [u,d,c,z,h,p,k] [0.4776470588235294,0.40080169463907445,0.33125631416001305,0.4500374775949161,0.3475639563304546,0.2779664331106404,0.45901906468958775] sd [u,d,c,z,h,p,k] [NaN,NaN,NaN,NaN,NaN,NaN,NaN]
+better than [D,C,Z,H,P,K] core precision at [1,1,0,1,1,0] nodes
+better than [D,C,Z,H,P,K] AUPRC at [1,1,1,1,1,1] nodes
+smallest core=95
+biggest core=95
+smallest nodes=323
+biggest nodes=323
+smallesthyper=200
+biggest hyper=200
