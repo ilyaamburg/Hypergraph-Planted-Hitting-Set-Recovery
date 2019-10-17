@@ -7,12 +7,14 @@ function emailPlots()
     for dataset in datasets
 
             PyPlot.clf()
-            to_plot=parsersPlot(dataset*"-3-size-iteration.txt")
-            plot(collect(1:iter),to_plot,linewidth=2,grid=false,linestyle=:dash, framestyle=:box, legend=:none, title=dataset*" UMHS output size", xlabel="iteration", ylabel="(output size)/(core size)")
-            for rank in [4,5]
+            to_plot=parsersPlot(dataset*"-25-size-iteration.txt")
+            plot(collect(1:iter),to_plot,linewidth=4,grid=false,linestyle=:dash, framestyle=:box, legend=:none, title=dataset*" UMHS output size", xlabel="iteration", ylabel="(output size)/(core size)")
+            for rank in [3,4,5]
                 to_plot=parsersPlot(dataset*"-$rank-size-iteration.txt")
-                if rank==4
+                if rank==5
                     lw=3
+                elseif rank== 4
+                    lw=2
                 else
                     lw=1
                 end
@@ -20,12 +22,14 @@ function emailPlots()
             end
             savefig(dataset*"-size.eps")
         PyPlot.clf()
-        to_plot=parsersPlot(dataset*"-3-fraction-recovered-iteration.txt")
-        plot(collect(1:iter),to_plot,linewidth=2,grid=false,linestyle=:dash,framestyle=:box,label="r=3", title=dataset*" UMHS fraction recovered", xlabel="iteration", ylabel="fraction recovered")
-        for rank in [4,5]
+        to_plot=parsersPlot(dataset*"-25-fraction-recovered-iteration.txt")
+        plot(collect(1:iter),to_plot,linewidth=4,grid=false,linestyle=:dash,framestyle=:box,label="r⩽25", title=dataset*" UMHS fraction recovered", xlabel="iteration", ylabel="fraction recovered")
+        for rank in [3,4,5]
             to_plot=parsersPlot(dataset*"-$rank-fraction-recovered-iteration.txt")
-            if rank==4
+            if rank==5
                 lw=3
+            elseif rank== 4
+                lw=2
             else
                 lw=1
             end
@@ -40,12 +44,14 @@ function emailPlots()
     for dataset in datasets
 
             PyPlot.clf()
-            to_plot=parsersPlot(dataset*"-3-size-iteration.txt")
-            plot(collect(1:iter),to_plot,linewidth=2,grid=false,linestyle=:dash, framestyle=:box, legend=:none, title=dataset*" UMHS output size", xlabel="iteration", ylabel="(output size)/(core size)")
-            for rank in [4,5]
+            to_plot=parsersPlot(dataset*"-25-size-iteration.txt")
+            plot(collect(1:iter),to_plot,linewidth=4,grid=false,linestyle=:dash, framestyle=:box, legend=:none, title=dataset*" UMHS output size", xlabel="iteration", ylabel="(output size)/(core size)")
+            for rank in [3,4,5]
                 to_plot=parsersPlot(dataset*"-$rank-size-iteration.txt")
-                if rank==4
+                if rank==5
                     lw=3
+                elseif rank== 4
+                    lw=2
                 else
                     lw=1
                 end
@@ -53,12 +59,14 @@ function emailPlots()
             end
             savefig(dataset*"-size.eps")
         PyPlot.clf()
-        to_plot=parsersPlot(dataset*"-3-fraction-recovered-iteration.txt")
-        plot(collect(1:iter),to_plot,linewidth=2,grid=false,linestyle=:dash,framestyle=:box, legend=:none, title=dataset*" UMHS fraction recovered", xlabel="iteration", ylabel="fraction recovered")
-        for rank in [4,5]
+        to_plot=parsersPlot(dataset*"-25-fraction-recovered-iteration.txt")
+        plot(collect(1:iter),to_plot,linewidth=4,grid=false,linestyle=:dash,framestyle=:box, legend=:none, title=dataset*" UMHS fraction recovered", xlabel="iteration", ylabel="fraction recovered")
+        for rank in [3,4,5]
             to_plot=parsersPlot(dataset*"-$rank-fraction-recovered-iteration.txt")
-            if rank==4
+            if rank==5
                 lw=3
+            elseif rank== 4
+                lw=2
             else
                 lw=1
             end
@@ -69,6 +77,8 @@ function emailPlots()
 
     end
 end
+
+
 
 
 emailPlots()
